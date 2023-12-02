@@ -12,6 +12,6 @@ echo $AOC_SESSION
 
 mkdir -p "$dir"
 touch "$dir/test_input"
-curl https://adventofcode.com/"$AOC_YEAR"/day/"$AOC_DAY"/input --cookie "session=$AOC_SESSION" -o "$dir/input"
-echo "#!/usr/bin/env python" >> "$dir/main.py"
+curl https://adventofcode.com/${AOC_YEAR}/day/${AOC_DAY}/input --cookie "session=${AOC_SESSION}" -o "${dir}/input"
+cp template_main.py "${dir}/main_a.py"
 chmod u+x "$dir/main.py"
